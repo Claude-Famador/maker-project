@@ -25,7 +25,7 @@ export default function QuestsPage() {
               <p className="mt-4 text-sm text-[#516072] leading-6">
                 🔔 Do You Have What It Takes?
                 <br />
-                Can you light the watchtower, defend the realm, and prove your maker skills? Step into the quest and show what you're made of!
+                Can you light the watchtower, defend the realm, and prove your maker skills? Step into the quest and show what you&apos;re made of!
               </p>
               <div className="mt-6 flex items-center justify-between text-xs text-[#6a7b8d]">
                 <span>Arduino 101</span>

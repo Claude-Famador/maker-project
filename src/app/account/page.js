@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import Modal from "../components/Modal";
 import { useTheme } from "../components/ThemeProvider";
 
@@ -39,8 +40,10 @@ export default function AccountPage() {
     <main className="mx-auto max-w-3xl px-4 py-8 text-white">
       <div className="card rounded-2xl p-6 text-[#1a2a3a] bg-white">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-[#d9e7ff] overflow-hidden">
-            {avatarUrl && <img src={avatarUrl} alt="avatar" className="w-full h-full object-cover" />}
+          <div className="w-16 h-16 rounded-full bg-[#d9e7ff] overflow-hidden relative">
+            {avatarUrl && (
+              <Image src={avatarUrl} alt="avatar" fill sizes="64px" className="object-cover" />
+            )}
           </div>
           <div className="flex-1">
             <div className="text-sm text-[#6a7b8d]">Your Avatar</div>
