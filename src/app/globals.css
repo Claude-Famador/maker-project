@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-bg: #ffffff;
+  --card-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 @theme inline {
@@ -12,15 +14,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --background: #0e4f7f;
+  --foreground: #ededed;
+  --card-bg: #ffffff;
+}
+
+[data-theme="light"] {
+  --background: #f2f7fb;
+  --foreground: #1a1a1a;
+  --card-bg: #ffffff;
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(1200px 600px at 50% -200px, #2b7db6 0%, #0e4f7f 40%, #0b3c60 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gorham", var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
 }
